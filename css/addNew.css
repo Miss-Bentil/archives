@@ -1,0 +1,25 @@
+
+/* This removes the dd/mm/yyy when input is not in focus */
+
+input[type=date]:required:invalid::-webkit-datetime-edit {
+    color: transparent;
+}
+input[type=date]:focus::-webkit-datetime-edit {
+    color: rgb(62, 62, 62) !important;
+}
+
+
+
+#phone-input::before {
+  content: "+233 ";
+  color: gray;
+}
+
+ {
+
+}
+
+
+/* input[type=tel]::placeholder {
+  color: green;
+} */
