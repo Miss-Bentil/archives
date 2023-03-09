@@ -1,4 +1,3 @@
-
 /* This removes the dd/mm/yyy when input is not in focus */
 
 input[type=date]:required:invalid::-webkit-datetime-edit {
@@ -15,6 +14,11 @@ input[type=date]:focus::-webkit-datetime-edit {
   color: gray;
 }
 
+.account_circle {
+    font-size: 30px !important;
+}
 
-
-
+.card-hostess {
+    border-color: #c4c4c4 ;
+    box-shadow: 0 4px 2px 0 rgba(135, 135, 135, 0.14), 0 7px 10px -5px rgba(134, 134, 134, 0.4) !important
+}

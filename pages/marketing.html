@@ -53,7 +53,7 @@
       href="../assets/css/material-dashboard.css?v=3.0.4"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="../css/addNew.css" />
+    <link rel="stylesheet" href="../css/marketing.css" />
   </head>
 
   <body class="g-sidenav-show bg-gray-200">
@@ -78,7 +78,7 @@
               class="navbar-brand-img h-100"
               alt="main_logo"
             />
-            <span class="ms-1 font-weight-bold text-white text-wrap text-center"
+            <span class="ms-1 text-white text-wrap text-center"
               >MAD <br />
               <small>Reservations System</small></span
             >
@@ -161,11 +161,16 @@
           </li>
         </ul>
       </div>
-       <div class="sidenav-footer position-absolute w-100 bottom-0 ">
-      <div class="mx-3">
-        <a class="btn bg-gradient-primary mt-4 w-100" href="https://www.creative-tim.com/product/material-dashboard-pro?ref=sidebarfree" type="button">Logout</a>
+      <div class="sidenav-footer position-absolute w-100 bottom-0">
+        <div class="mx-3">
+          <a
+            class="btn bg-gradient-primary mt-4 w-100"
+            href="https://www.creative-tim.com/product/material-dashboard-pro?ref=sidebarfree"
+            type="button"
+            >Logout</a
+          >
+        </div>
       </div>
-    </div>
     </aside>
     <main
       class="main-content position-relative max-height-vh-100 h-100 border-radius-lg"
@@ -321,47 +326,36 @@
                     <h6 class="text-white text-capitalize ps-3">Add New</h6>
                   </div>
                 </div>
-                <div class="card-body pb-2 px-1 ">
+                <div class="card-body pb-2 px-5">
                   <div class="table-responsive p-0">
                     <div class="card-body">
                       <form role="form">
                         <div class="row">
-                          <div class="col-md-6 col-12 ">
+                          <div class="col-md-6">
                             <div class="input-group input-group-outline mb-3">
-                              <label class="form-label">Date</label>
-                              <input
-                                placeholder=""
-                                class="form-control"
-                                type="date"
-                                id="date-input"
-                                class="date-input"
-                                required
-                              />
-                            </div>
-                          </div>
-                          <div class="col-md-6 col-12">
-                            <div class="input-group input-group-outline mb-3">
-                              <label class="form-label">Table Number</label>
-                              <input type="number" class="form-control" />
+                              <select
+                                class="form-select form-control select"
+                                aria-label="Default select example"
+                                style="color: grey"
+                              >
+                                <option selected>Send by:</option>
+                                <option value="1">Mail</option>
+                                <option value="2">SMS</option>
+                              </select>
                             </div>
                           </div>
                         </div>
                         <div class="row">
-                          <div class="col-md-6 col-12">
+                          <div class="col-md-6">
                             <div class="input-group input-group-outline mb-3">
-                              <label class="form-label">Full Name</label>
+                              <label class="form-label">To :</label>
                               <input type="text" class="form-control" />
                             </div>
                           </div>
-                          <div class="col-md-6 col-12">
-                            <div class="input-group input-group-outline mb-3">
-                              <label class="form-label">Phone Number</label>
-                              <input
-                                type="tel"
-                                class="form-control"
-                                id="phone-input"
-                                pattern="+233[2-9][0-9]{8}"
-                              />
+                          <div class="col-md-6 d-flex align-items-center">
+                            <div class="d-flex">
+                              <input type="checkbox" class="checkbox" />
+                              <label for="" class="text-lg">Send to All</label>
                             </div>
                           </div>
                           <div
@@ -369,13 +363,41 @@
                           ></div>
                         </div>
                         <div class="row">
-                          <div class="col-md-6 col-12">
+                          <div class="col-md-6">
                             <div class="input-group input-group-outline mb-3">
-                              <label class="form-label">Seats</label>
+                              <label class="form-label">Subject:</label>
                               <input type="number" class="form-control" />
                             </div>
                           </div>
-                          <div class="col-md-6 col-12"></div>
+                          <div class="col-md-6"></div>
+                        </div>
+                        <div class="row">
+                          <div class="col-md-6">
+                            <div class="input-group input-group-outline mb-3">
+                              <input
+                                type="file"
+                                id="file"
+                                multiple
+                                class="px-4 file-btn"
+                              />
+                            </div>
+                          </div>
+                          <div class="col-md-6"></div>
+                        </div>
+
+                        <div class="row">
+                          <div class="col-md-6">
+                            <div class="input-group input-group-outline mb-3">
+                              <label>Message:</label>
+                              <textarea
+                                name=""
+                                id=""
+                                cols="90"
+                                rows="4"
+                                class="resize-none"
+                              ></textarea>
+                            </div>
+                          </div>
                         </div>
 
                         <div>
@@ -383,7 +405,7 @@
                             type="button"
                             class="btn btn-lgn bg-gradient-primary btn-lg mt-4 mb-0"
                           >
-                            Submit
+                            Send
                           </button>
                         </div>
                       </form>
@@ -433,89 +455,25 @@
                     <table class="table">
                       <thead>
                         <tr>
-                          <th scope="col" class="col-1">Res #</th>
-                          <th scope="col" class="col-1">Table #</th>
-                          <th scope="col" class="col-2">Name</th>
-                          <th scope="col" class="col-1">Seats</th>
                           <th scope="col" class="col-1">Date</th>
-                          <th scope="col" class="col-1">Action</th>
+                          <th scope="col" class="col-2">Subject</th>
+                          <th scope="col" class="col-2">Sent to</th>
+                          <th scope="col" class="col-2">Sent by</th>
                         </tr>
                       </thead>
                       <tbody>
                         <tr>
-                          <td class="px-4">233</td>
-                          <td class="px-4 font-weight-bold">2</td>
-                          <td class="px-4 text-capitalize font-weight-bold">
-                            kwesi Plange
-                          </td>
-                          <td class="px-4">11</td>
                           <td class="px-4">21/03/2020</td>
-                          <td class="px-4">
-                            <button
-                              class="btn btn-link text-secondary mb-0"
-                              aria-haspopup="true"
-                              aria-expanded="false"
-                            >
-                              <i class="fa fa-ellipsis-v text-xs"></i>
-                            </button>
-                          </td>
+                          <td class="px-4">Discounts</td>
+                          <td class="px-4 text-capitalize">kwesi Plange</td>
+                          <td class="px-4">Blue Newton</td>
                         </tr>
 
                         <tr>
-                          <td class="px-4">233</td>
-                          <td class="px-4 font-weight-bold">2</td>
-                          <td class="px-4 text-capitalize font-weight-bold">
-                            <b>kwame Newton</b>
-                          </td>
-                          <td class="px-4">4</td>
                           <td class="px-4">21/03/2020</td>
-                          <td class="px-4">
-                            <button
-                              class="btn btn-link text-secondary mb-0"
-                              aria-haspopup="true"
-                              aria-expanded="false"
-                            >
-                              <i class="fa fa-ellipsis-v text-xs"></i>
-                            </button>
-                          </td>
-                        </tr>
-
-                        <tr>
-                          <td class="px-4">233</td>
-                          <td class="px-4 font-weight-bold">2</td>
-                          <td class="px-4 text-capitalize font-weight-bold">
-                            Nana Thompson
-                          </td>
-                          <td class="px-4">3</td>
-                          <td class="px-4">21/03/2020</td>
-                          <td class="px-4">
-                            <button
-                              class="btn btn-link text-secondary mb-0"
-                              aria-haspopup="true"
-                              aria-expanded="false"
-                            >
-                              <i class="fa fa-ellipsis-v text-xs"></i>
-                            </button>
-                          </td>
-                        </tr>
-
-                        <tr>
-                          <td class="px-4">233</td>
-                          <td class="px-4 font-weight-bold">2</td>
-                          <td class="px-4 text-capitalize font-weight-bold">
-                            kojo Newton
-                          </td>
-                          <td class="px-4">5</td>
-                          <td class="px-4">21/03/2020</td>
-                          <td class="px-4">
-                            <button
-                              class="btn btn-link text-secondary mb-0"
-                              aria-haspopup="true"
-                              aria-expanded="false"
-                            >
-                              <i class="fa fa-ellipsis-v text-xs"></i>
-                            </button>
-                          </td>
+                          <td class="px-4">Discounts</td>
+                          <td class="px-4 text-capitalize">kwame Newton</td>
+                          <td class="px-4">Abigail Newton</td>
                         </tr>
                       </tbody>
                     </table>
@@ -525,7 +483,7 @@
             </div>
           </div>
         </div>
-        <footer class="content-footer footer bg-footer-theme">
+        <footer class="content-footer footer bg-footer-theme w-100">
           <div
             class="container-xxl d-flex flex-wrap justify-content-between py-2 flex-md-row flex-column"
           >
@@ -571,7 +529,7 @@
       }
     </script>
 
-    <script src="../assets/js/addNew.js"></script>
+    <script src="../assets/js/marketing.js"></script>
 
     <!-- Github buttons -->
     <script async defer src="https://buttons.github.io/buttons.js"></script>

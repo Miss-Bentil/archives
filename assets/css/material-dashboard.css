@@ -10845,7 +10845,8 @@ fieldset:disabled .btn {
 }
 
 .shadow-primary {
-  box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(129, 199, 132, 0.4)!important;
+ 
+  box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(0, 0, 0, 0.4) !important;
 }
 
 .shadow-secondary {
@@ -20502,8 +20503,10 @@ fieldset:disabled .btn {
 
 .btn-primary,
 .btn.bg-gradient-primary {
-  box-shadow: 0 3px 3px 0 rgba(129, 199, 132, 0.15), 0 3px 1px -2px rgba(129, 199, 132, 0.2), 0 1px 5px 0 rgba(129, 199, 132, 0.15);
+  /* box-shadow: 0 3px 3px 0 rgba(129, 199, 132, 0.15), 0 3px 1px -2px rgba(129, 199, 132, 0.2), 0 1px 5px 0 rgba(129, 199, 132, 0.15); */
+  box-shadow: 0 4px 20px 0 rgb(0 0 0 / 14%), 0 7px 10px -5px rgb(0 0 0 / 40%) !important;
 }
+
 
 .btn-primary:hover,
 .btn.bg-gradient-primary:hover {
@@ -22573,7 +22576,7 @@ label,
 }
 
 .bg-gradient-primary {
-  background-image: linear-gradient(195deg, #38B44A 0%, #28A745 100%);
+  background-image: linear-gradient(195deg, #42424a 0%, #191919 100%);
 }
 
 .bg-gradient-secondary {

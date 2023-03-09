@@ -1,0 +1,48 @@
+input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  margin-top: 4px;
+
+ 
+}
+/* This removes the dd/mm/yyy when input is not in focus */
+
+input[type="date"]:required:invalid::-webkit-datetime-edit {
+  color: transparent;
+}
+input[type="date"]:focus::-webkit-datetime-edit {
+  color: rgb(62, 62, 62) !important;
+}
+
+.resize-none {
+  resize: none !important;
+}
+
+textarea {
+  border-style: solid;
+  border-radius: 5px;
+  border-color: rgb(212, 212, 212);
+  padding: 10px;
+}
+
+textarea:focus {
+  border-color: green !important;
+}
+
+
+
+input[type="file"] {
+    padding-left: 0 !important;
+}
+
+.file-btn::-webkit-file-upload-button {
+    background: #191919 ;
+    border: none;
+    padding: 3px 10px;
+    border-radius: 10px;
+    margin-right: 10px;
+    color: white;
+
+}
+

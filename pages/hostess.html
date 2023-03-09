@@ -53,7 +53,7 @@
       href="../assets/css/material-dashboard.css?v=3.0.4"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="../css/addNew.css" />
+    <link rel="stylesheet" href="../css/hostess.css" />
   </head>
 
   <body class="g-sidenav-show bg-gray-200">
@@ -161,7 +161,7 @@
           </li>
         </ul>
       </div>
-       <div class="sidenav-footer position-absolute w-100 bottom-0 ">
+         <div class="sidenav-footer position-absolute w-100 bottom-0 ">
       <div class="mx-3">
         <a class="btn bg-gradient-primary mt-4 w-100" href="https://www.creative-tim.com/product/material-dashboard-pro?ref=sidebarfree" type="button">Logout</a>
       </div>
@@ -308,106 +308,17 @@
       </nav>
       <!-- End Navbar -->
       <div class="container-fluid py-4">
-        <div class="row min-vh-80">
+        <div class="row min-vh-10">
           <div class="row">
             <div class="col-12 mx-2">
-              <div class="card my-4">
-                <div
-                  class="card-header p-0 position-relative mt-n4 mx-3 z-index-2"
-                >
-                  <div
-                    class="bg-gradient-primary shadow-primary border-radius-lg pt-4 pb-3"
-                  >
-                    <h6 class="text-white text-capitalize ps-3">Add New</h6>
-                  </div>
-                </div>
-                <div class="card-body pb-2 px-1 ">
-                  <div class="table-responsive p-0">
-                    <div class="card-body">
-                      <form role="form">
-                        <div class="row">
-                          <div class="col-md-6 col-12 ">
-                            <div class="input-group input-group-outline mb-3">
-                              <label class="form-label">Date</label>
-                              <input
-                                placeholder=""
-                                class="form-control"
-                                type="date"
-                                id="date-input"
-                                class="date-input"
-                                required
-                              />
-                            </div>
-                          </div>
-                          <div class="col-md-6 col-12">
-                            <div class="input-group input-group-outline mb-3">
-                              <label class="form-label">Table Number</label>
-                              <input type="number" class="form-control" />
-                            </div>
-                          </div>
-                        </div>
-                        <div class="row">
-                          <div class="col-md-6 col-12">
-                            <div class="input-group input-group-outline mb-3">
-                              <label class="form-label">Full Name</label>
-                              <input type="text" class="form-control" />
-                            </div>
-                          </div>
-                          <div class="col-md-6 col-12">
-                            <div class="input-group input-group-outline mb-3">
-                              <label class="form-label">Phone Number</label>
-                              <input
-                                type="tel"
-                                class="form-control"
-                                id="phone-input"
-                                pattern="+233[2-9][0-9]{8}"
-                              />
-                            </div>
-                          </div>
-                          <div
-                            class="form-check form-check-info text-start ps-0"
-                          ></div>
-                        </div>
-                        <div class="row">
-                          <div class="col-md-6 col-12">
-                            <div class="input-group input-group-outline mb-3">
-                              <label class="form-label">Seats</label>
-                              <input type="number" class="form-control" />
-                            </div>
-                          </div>
-                          <div class="col-md-6 col-12"></div>
-                        </div>
-
-                        <div>
-                          <button
-                            type="button"
-                            class="btn btn-lgn bg-gradient-primary btn-lg mt-4 mb-0"
-                          >
-                            Submit
-                          </button>
-                        </div>
-                      </form>
+              <div class="card h-100">
+                <div class="card-header pb-0 px-3">
+                  <div class="row">
+                    <div class="col-6">
+                      <h6 class="mb-0">Reservations for tonight</h6>
                     </div>
                   </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- TABLE -->
-          <div class="row">
-            <div class="col-12">
-              <div class="card my-4">
-                <div
-                  class="card-header p-0 position-relative mt-n4 mx-3 z-index-2"
-                >
-                  <div
-                    class="bg-gradient-primary shadow-primary border-radius-lg pt-4 pb-3"
-                  >
-                    <h6 class="text-white text-capitalize ps-3">List</h6>
-                  </div>
-                </div>
-                <div class="search-date mt-4 px-4">
-                  <div class="row">
+                  <div class="row mt-4">
                     <div class="col-6">
                       <div class="input-group input-group-outline mb-3">
                         <label class="form-label">Date</label>
@@ -415,12 +326,14 @@
                           placeholder=""
                           class="form-control"
                           type="date"
+                          id="date-input"
+                          class="date-input"
                           required
-                          id="date-input-two"
                         />
                       </div>
                     </div>
                     <div class="col-6">
+                      <div class=" justify-content-end text-end">
                       <div class="input-group input-group-outline mb-3">
                         <label class="form-label">Search</label>
                         <input type="text" class="form-control" />
@@ -428,103 +341,142 @@
                     </div>
                   </div>
                 </div>
-                <div class="card-body px-0 pb-2">
-                  <div class="table-responsive p-0">
-                    <table class="table">
-                      <thead>
-                        <tr>
-                          <th scope="col" class="col-1">Res #</th>
-                          <th scope="col" class="col-1">Table #</th>
-                          <th scope="col" class="col-2">Name</th>
-                          <th scope="col" class="col-1">Seats</th>
-                          <th scope="col" class="col-1">Date</th>
-                          <th scope="col" class="col-1">Action</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <td class="px-4">233</td>
-                          <td class="px-4 font-weight-bold">2</td>
-                          <td class="px-4 text-capitalize font-weight-bold">
-                            kwesi Plange
-                          </td>
-                          <td class="px-4">11</td>
-                          <td class="px-4">21/03/2020</td>
-                          <td class="px-4">
-                            <button
-                              class="btn btn-link text-secondary mb-0"
-                              aria-haspopup="true"
-                              aria-expanded="false"
+                <div class="card-body pt-4 p-1">
+                  <ul class="list-group">
+                       <a href="" data-bs-toggle="modal" data-bs-target=".one">
+                      <li
+                        class="list-group-item border-1 px-4 d-flex justify-content-between ps-0 mb-3 border-radius-lg rounded card-hostess"
+                      >
+                        <div class="d-flex align-items-center mx-2">
+                          <button
+                            class="btn btn-icon-only btn-rounded btn-outline-danger mb-0 me-3 p-3 btn-sm d-flex align-items-center justify-content-center"
+                          >
+                            <i class="material-icons text-lg account_circle "
+                              >account_circle</i
                             >
-                              <i class="fa fa-ellipsis-v text-xs"></i>
-                            </button>
-                          </td>
-                        </tr>
+                          </button>
+                          <div class="d-flex flex-column">
+                            <!-- add next to name if more visits vip client  -->
+                            <h6 class="mb-0 text-dark d-flex align-items-center">Patrick <small >  <i class="material-icons mt-2 text-warning mx-2"
+                              >diamond</i
+                            ></small></h6>
+                            <div class="text-sm">
+                              <span class="font-weight-bold">Res# </span>
+                              3
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                            <div
+                          class="d-flex align-items-center text-danger text-gradient font-weight-bold col-6 "
+                        >
+                        4p
+                        </div>
+                        <div  class="col-6 d-flex align-items-center text-danger text-gradient font-weight-bold"> VIP</div>
+                        
+                          
 
-                        <tr>
-                          <td class="px-4">233</td>
-                          <td class="px-4 font-weight-bold">2</td>
-                          <td class="px-4 text-capitalize font-weight-bold">
-                            <b>kwame Newton</b>
-                          </td>
-                          <td class="px-4">4</td>
-                          <td class="px-4">21/03/2020</td>
-                          <td class="px-4">
-                            <button
-                              class="btn btn-link text-secondary mb-0"
-                              aria-haspopup="true"
-                              aria-expanded="false"
-                            >
-                              <i class="fa fa-ellipsis-v text-xs"></i>
-                            </button>
-                          </td>
-                        </tr>
+                        </div>
+                      
+                      </li>
+                    </a>
 
-                        <tr>
-                          <td class="px-4">233</td>
-                          <td class="px-4 font-weight-bold">2</td>
-                          <td class="px-4 text-capitalize font-weight-bold">
-                            Nana Thompson
-                          </td>
-                          <td class="px-4">3</td>
-                          <td class="px-4">21/03/2020</td>
-                          <td class="px-4">
-                            <button
-                              class="btn btn-link text-secondary mb-0"
-                              aria-haspopup="true"
-                              aria-expanded="false"
+                    <a href="" data-bs-toggle="modal" data-bs-target=".one">
+                      <li
+                        class="list-group-item border-1 d-flex justify-content-between ps-0 mb-2 border-radius-lg rounded card-hostess"
+                      >
+                        <div class="d-flex align-items-center mx-2">
+                          <button
+                            class="btn btn-icon-only btn-rounded btn-outline-success mb-0 me-3 p-3 btn-sm d-flex align-items-center justify-content-center"
+                          >
+                            <i class="material-icons text-lg account_circle"
+                              >account_circle</i
                             >
-                              <i class="fa fa-ellipsis-v text-xs"></i>
-                            </button>
-                          </td>
-                        </tr>
+                          </button>
+                          <div class="d-flex flex-column">
+                            <h6 class="mb-0 text-dark d-flex align-items-center">Patrick <small >  <i class="material-icons mt-2 text-warning mx-2 "
+                              >diamond</i
+                            ></small></h6>
+                            <div class="text-sm">
+                              <span class="font-weight-bold">Res# </span>
+                              3
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                            <div
+                          class="d-flex align-items-center text-success text-gradient font-weight-bold col-6 "
+                        >
+                        4p
+                        </div>
+                        <div  class="col-6 d-flex align-items-center text-success text-gradient font-weight-bold"> VIP</div>
+                        
+                          
 
-                        <tr>
-                          <td class="px-4">233</td>
-                          <td class="px-4 font-weight-bold">2</td>
-                          <td class="px-4 text-capitalize font-weight-bold">
-                            kojo Newton
-                          </td>
-                          <td class="px-4">5</td>
-                          <td class="px-4">21/03/2020</td>
-                          <td class="px-4">
-                            <button
-                              class="btn btn-link text-secondary mb-0"
-                              aria-haspopup="true"
-                              aria-expanded="false"
-                            >
-                              <i class="fa fa-ellipsis-v text-xs"></i>
-                            </button>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
+                        </div>
+                      
+                      </li>
+                    </a>
+                  </ul>
+                </div>
+                <!-- Modal 1 -->
+                <div
+                  class="modal fade one"
+                  tabindex="-1"
+                  aria-labelledby="exampleModalLabel"
+                  aria-hidden="true"
+                >
+                  <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">
+                          Reservation Details
+                        </h5>
+                        <button
+                          type="button"
+                          class="btn-close"
+                          data-bs-dismiss="modal"
+                          aria-label="Close"
+                        ></button>
+                      </div>
+                      <div class="modal-body">
+                        <div class="input-group input-group-outline mb-3">
+                          <label class="form-label">Reservation Name</label>
+                          <input type="text" class="form-control" />
+                        </div>
+                        <div class="input-group input-group-outline mb-3">
+                          <label class="form-label">Reservation Code</label>
+                          <input type="text" class="form-control" />
+                        </div>
+                        <div class="input-group input-group-outline mb-3">
+                          <label class="form-label">Seat Reserved</label>
+                          <input type="number" class="form-control" />
+                        </div>
+                        <div class="input-group input-group-outline mb-3">
+                          <label class="form-label">Seat Occupied</label>
+                          <input type="number" class="form-control" />
+                        </div>
+                      </div>
+                      <div class="modal-footer">
+                        <button
+                          type="button"
+                          class="btn btn-danger"
+                          data-bs-dismiss="modal"
+                        >
+                          Close
+                        </button>
+                        <button type="button" class="btn btn-success">
+                          Save changes
+                        </button>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
+
         <footer class="content-footer footer bg-footer-theme">
           <div
             class="container-xxl d-flex flex-wrap justify-content-between py-2 flex-md-row flex-column"
@@ -570,9 +522,6 @@
         Scrollbar.init(document.querySelector("#sidenav-scrollbar"), options);
       }
     </script>
-
-    <script src="../assets/js/addNew.js"></script>
-
     <!-- Github buttons -->
     <script async defer src="https://buttons.github.io/buttons.js"></script>
     <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->

@@ -3168,7 +3168,8 @@ textarea.form-control-lg {
 
 .btn-primary {
   --bs-btn-color: #000;
-  --bs-btn-bg: #00b894;
+
+   --bs-btn-bg: #00b894;
   --bs-btn-border-color: #00b894;
   --bs-btn-hover-color: #000;
   --bs-btn-hover-bg: #26c3a4;
@@ -9842,7 +9843,7 @@ textarea.form-control-lg {
 }
 
 .shadow-primary {
-  box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(233, 30, 99, 0.4) !important;
+  box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.4), 0 7px 10px -5px rgba(233, 30, 99, 0.4) !important;
 }
 
 .shadow-secondary {
@@ -19016,6 +19017,7 @@ label,
 
 .bg-gradient-primary {
   background-image: linear-gradient(195deg, #EC407A 0%, #D81B60 100%);
+  
 }
 
 .bg-gradient-secondary {
